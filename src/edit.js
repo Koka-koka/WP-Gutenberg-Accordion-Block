@@ -34,7 +34,7 @@ import "./editor.scss";
  */
 
 export default function Edit({ attributes, setAttributes }) {
-	const { content } = attributes;
+	const { content, textAlign } = attributes;
 	const blockProps = useBlockProps();
 	const [isOpen, setIsOpen] = useState(true);
 	const onChangeContent = (newContent) =>
@@ -57,6 +57,7 @@ export default function Edit({ attributes, setAttributes }) {
 						value={content}
 						onChange={(newContent) => onChangeContent(newContent)}
 						placeholder={__("Accordion Tab Title...")}
+						textAlign={textAlign}
 					/>
 					<Icon
 						icon={isOpen ? minus : plus}

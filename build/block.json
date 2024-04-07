@@ -17,6 +17,10 @@
       "source": "html",
       "selector": "h4"
     },
+    "textAlign": {
+      "type": "string",
+      "default": "left"
+    },
     "style": {
       "type": "object",
       "default": {
