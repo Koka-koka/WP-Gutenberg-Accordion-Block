@@ -1,0 +1,1 @@
+(()=>{const e=document.querySelectorAll(".accordion__item-header");document.querySelector(".accordion__item:nth-child(1) .accordion__item-body")&&e.forEach((e=>{e.addEventListener("click",(t=>{t.target.classList.toggle("active");const c=t.target.nextElementSibling;e.classList.contains("active")?c.style.maxHeight=c.scrollHeight+"px":c.style.maxHeight=0}))}))})();

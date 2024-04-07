@@ -1,0 +1,22 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.accordion__editor-item {
+	&-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: #fff;
+
+		h4 {
+			margin: 0;
+		}
+	}
+
+	p {
+		margin: 0;
+	}
+}

@@ -1,0 +1,64 @@
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.wp-block-create-block-accordion-block {
+	background-color: #606855;
+	color: #fff;
+	padding: 3px;
+	margin: 0;
+
+	// Acordion Section
+	.accordion {
+		h4 {
+			margin: 0;
+		}
+		// .accordion__item
+
+		&__item {
+			border-top: 2px solid #bdc9ac;
+			border-bottom: 2px solid #bdc9ac;
+			padding: 10px;
+		}
+
+		// .accordion__item-header
+
+		&__item-header {
+			color: #fff;
+			padding: 5px;
+			margin: 0;
+			font-weight: bold;
+			display: flex;
+			align-items: center;
+			position: relative;
+			cursor: pointer;
+		}
+
+		&__item-header::after {
+			content: "\002B";
+			font-size: 1.5rem;
+			position: absolute;
+			right: 1rem;
+			color: #fff;
+		}
+
+		&__item-header.active::after {
+			content: "";
+			width: 7px;
+			height: 3px;
+			background-color: black;
+			padding-right: 1rem;
+			color: fff;
+		}
+
+		&__item-body {
+			max-height: 0;
+			overflow: hidden;
+			transition: all 0.2s ease;
+			padding: 0px 5px;
+		}
+	}
+}
