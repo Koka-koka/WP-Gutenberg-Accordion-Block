@@ -5,11 +5,13 @@
  */
 
 .accordion__editor-item {
+	padding: 5px;
 	&-header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		color: #fff;
+		border-top: 2px solid #bdc9ac;
+		padding: 3px;
 
 		h4 {
 			margin: 0;

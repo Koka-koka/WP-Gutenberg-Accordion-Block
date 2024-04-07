@@ -5,7 +5,6 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
 import { useBlockProps, InnerBlocks } from "@wordpress/block-editor";
-import { Icon } from "@wordpress/components";
 
 /**
  * The save function defines the way in which the different attributes should
@@ -21,7 +20,9 @@ export default function save({ attributes }) {
 	return (
 		<div {...blockProps}>
 			<div className="accordion__item">
-				<h4 className="accordion__item-header">{attributes.content}</h4>
+				<h4 {...blockProps} className="accordion__item-header">
+					{attributes.content}
+				</h4>
 				<div className="accordion__item-body">
 					<div {...blockProps}>
 						<InnerBlocks.Content />

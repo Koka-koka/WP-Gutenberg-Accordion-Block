@@ -13,7 +13,7 @@ import { __ } from "@wordpress/i18n";
  */
 import { useBlockProps, RichText, InnerBlocks } from "@wordpress/block-editor";
 import { useState } from "@wordpress/element";
-import { Button } from "@wordpress/components";
+import { Icon } from "@wordpress/components";
 import { plus, minus } from "@wordpress/icons";
 
 /**
@@ -52,13 +52,13 @@ export default function Edit({ attributes, setAttributes }) {
 					onClick={toggleAccordion}
 				>
 					<RichText
+						{...blockProps}
 						tagName="h4"
 						value={content}
-						withoutInteractiveFormatting
 						onChange={(newContent) => onChangeContent(newContent)}
 						placeholder={__("Accordion Tab Title...")}
 					/>
-					<Button
+					<Icon
 						icon={isOpen ? minus : plus}
 						label={isOpen ? __("Close Accordion") : __("Open Accordion")}
 					/>

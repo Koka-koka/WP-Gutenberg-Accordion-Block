@@ -20,8 +20,7 @@
 
 		&__item {
 			border-top: 2px solid #bdc9ac;
-			border-bottom: 2px solid #bdc9ac;
-			padding: 10px;
+			padding: 5px;
 		}
 
 		// .accordion__item-header
@@ -47,11 +46,10 @@
 
 		&__item-header.active::after {
 			content: "";
-			width: 7px;
-			height: 3px;
-			background-color: black;
+			width: 3px;
+			height: 2px;
+			background-color: #fff;
 			padding-right: 1rem;
-			color: fff;
 		}
 
 		&__item-body {
@@ -59,6 +57,10 @@
 			overflow: hidden;
 			transition: all 0.2s ease;
 			padding: 0px 5px;
+
+			p {
+				margin: 0;
+			}
 		}
 	}
 }
